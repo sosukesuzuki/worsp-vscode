@@ -1,0 +1,34 @@
+{
+  "name": "worsp-vscode",
+  "displayName": "worsp-vscode",
+  "description": "VSCode extension for worsp lang",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "worsp",
+        "aliases": [
+          "worsp",
+          "worsp"
+        ],
+        "extensions": [
+          ".wsp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "worsp",
+        "scopeName": "source.worsp",
+        "path": "./syntaxes/worsp.tmLanguage.json"
+      }
+    ]
+  }
+}
