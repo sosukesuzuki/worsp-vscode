@@ -7,6 +7,15 @@
     },
     {
       "include": "#strings"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#function-calls"
+    },
+    {
+      "include": "#variable-declarations"
     }
   ],
   "repository": {
@@ -26,6 +35,51 @@
         {
           "name": "constant.character.escape.worsp",
           "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "name": "comment.line.worsp",
+      "begin": ";",
+      "end": "\\n"
+    },
+    "function-calls": {
+      "begin": "\\(",
+      "end": "\\)",
+      "contentName": "meta.function-call.yourlisp",
+      "patterns": [
+        {
+          "name": "entity.name.function.yourlisp",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+          "captures": {
+            "0": {
+              "name": "entity.name.function.worsp"
+            }
+          }
+        },
+        {
+          "name": "variable.parameter.worsp",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+        }
+      ]
+    },
+    "variable-declarations": {
+      "begin": "\\(",
+      "end": "\\)",
+      "contentName": "meta.function-call.worsp",
+      "patterns": [
+        {
+          "name": "entity.name.function.worsp",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+          "captures": {
+            "0": {
+              "name": "entity.name.function.worsp"
+            }
+          }
+        },
+        {
+          "name": "variable.parameter.worsp",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
         }
       ]
     }
