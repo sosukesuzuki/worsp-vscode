@@ -2,6 +2,10 @@
   "name": "worsp-vscode",
   "displayName": "worsp-vscode",
   "description": "VSCode extension for worsp lang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sosukesuzuki/worsp-vscode"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.83.0"
